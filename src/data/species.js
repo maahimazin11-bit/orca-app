@@ -11,6 +11,7 @@ export const categories = {
     { id: 'reptiles', name: 'Reptiles', icon: 'turtle', count: 6 },
     { id: 'invertebrates', name: 'Invertebrates', icon: 'jellyfish', count: 8 },
     { id: 'coral-reef', name: 'Coral & Reef', icon: 'coral', count: 6 },
+    { id: 'deep-sea', name: 'Deep Sea', icon: 'deepsea', count: 6 },
   ],
   plant: [
     { id: 'seagrass', name: 'Seagrasses', icon: 'seagrass', count: 1 },
@@ -21,16 +22,16 @@ export const categories = {
 
 export const species = {
   fish: [
-    { id: 'clownfish', common: 'Clownfish', scientific: 'Amphiprioninae', teaser: 'The reef\'s most famous resident, forever bound to its anemone.' },
+    { id: 'clownfish', common: 'Clownfish', scientific: 'Amphiprioninae', teaser: 'The reef\'s most famous resident, forever bound to its anemone.', imageQuery: 'clownfish anemone reef' },
     { id: 'blue-tang', common: 'Blue Tang', scientific: 'Paracanthurus hepatus', teaser: 'Vivid blue surgeonfish with a hidden scalpel at its tail.' },
     { id: 'lionfish', common: 'Lionfish', scientific: 'Pterois', teaser: 'Spectacular and venomous — a reef predator wrapped in warning colours.' },
-    { id: 'napoleon-wrasse', common: 'Napoleon Wrasse', scientific: 'Cheilinus undulatus', teaser: 'The gentle giant of coral reefs, ancient and unhurried.' },
+    { id: 'napoleon-wrasse', common: 'Napoleon Wrasse', scientific: 'Cheilinus undulatus', teaser: 'The gentle giant of coral reefs, ancient and unhurried.', imageQuery: 'humphead wrasse coral reef' },
     { id: 'bumphead-parrotfish', common: 'Bumphead Parrotfish', scientific: 'Bolbometopon muricatum', teaser: 'It literally eats coral and poops out white sand beaches.' },
-    { id: 'mandarin-fish', common: 'Mandarin Fish', scientific: 'Synchiropus splendidus', teaser: 'Possibly the most colourful vertebrate on Earth.' },
-    { id: 'seahorse', common: 'Seahorse', scientific: 'Hippocampus', teaser: 'The only animal where the male becomes pregnant.' },
-    { id: 'moorish-idol', common: 'Moorish Idol', scientific: 'Zanclus cornutus', teaser: 'An iconic reef fish that almost never survives in captivity.' },
+    { id: 'mandarin-fish', common: 'Mandarin Fish', scientific: 'Synchiropus splendidus', teaser: 'Possibly the most colourful vertebrate on Earth.', imageQuery: 'mandarin dragonet fish coral' },
+    { id: 'seahorse', common: 'Seahorse', scientific: 'Hippocampus', teaser: 'The only animal where the male becomes pregnant.', imageQuery: 'seahorse ocean marine' },
+    { id: 'moorish-idol', common: 'Moorish Idol', scientific: 'Zanclus cornutus', teaser: 'An iconic reef fish that almost never survives in captivity.', imageQuery: 'moorish idol fish reef' },
     { id: 'barracuda', common: 'Barracuda', scientific: 'Sphyraena', teaser: 'Torpedo-shaped apex predator, terrifying up close.' },
-    { id: 'trevally', common: 'Trevally', scientific: 'Caranx ignobilis', teaser: 'A powerful pack hunter that dominates open-water reefs.' },
+    { id: 'trevally', common: 'Trevally', scientific: 'Caranx ignobilis', teaser: 'A powerful pack hunter that dominates open-water reefs.', imageQuery: 'giant trevally fish ocean' },
   ],
   'sharks-rays': [
     { id: 'whale-shark', common: 'Whale Shark', scientific: 'Rhincodon typus', teaser: 'The ocean\'s largest fish — and it only eats tiny plankton.' },
@@ -51,22 +52,22 @@ export const species = {
     { id: 'indo-pacific-bottlenose-dolphin', common: 'Indo-Pacific Bottlenose Dolphin', scientific: 'Tursiops aduncus', teaser: 'Smarter than a dog, social as a human, and deeply misunderstood.' },
   ],
   reptiles: [
-    { id: 'green-sea-turtle', common: 'Green Sea Turtle', scientific: 'Chelonia mydas', teaser: 'Returns to the exact beach where it was born, decades later.' },
-    { id: 'hawksbill-sea-turtle', common: 'Hawksbill Sea Turtle', scientific: 'Eretmochelys imbricata', teaser: 'Eats sponges that would otherwise smother coral reefs.' },
-    { id: 'leatherback-sea-turtle', common: 'Leatherback Sea Turtle', scientific: 'Dermochelys coriacea', teaser: 'Dives deeper than most submarines and has no hard shell.' },
-    { id: 'olive-ridley-turtle', common: 'Olive Ridley Turtle', scientific: 'Lepidochelys olivacea', teaser: 'Thousands nest simultaneously in one of nature\'s great spectacles.' },
-    { id: 'banded-sea-krait', common: 'Banded Sea Krait', scientific: 'Laticauda colubrina', teaser: 'Venom ten times stronger than a cobra — yet remarkably docile.' },
-    { id: 'yellow-bellied-sea-snake', common: 'Yellow-bellied Sea Snake', scientific: 'Hydrophis platurus', teaser: 'The most widely distributed reptile on Earth, never needing to touch land.' },
+    { id: 'green-sea-turtle', common: 'Green Sea Turtle', scientific: 'Chelonia mydas', teaser: 'Returns to the exact beach where it was born, decades later.', imageQuery: 'green sea turtle underwater swimming' },
+    { id: 'hawksbill-sea-turtle', common: 'Hawksbill Sea Turtle', scientific: 'Eretmochelys imbricata', teaser: 'Eats sponges that would otherwise smother coral reefs.', imageQuery: 'hawksbill turtle underwater reef' },
+    { id: 'leatherback-sea-turtle', common: 'Leatherback Sea Turtle', scientific: 'Dermochelys coriacea', teaser: 'Dives deeper than most submarines and has no hard shell.', imageQuery: 'leatherback sea turtle adult ocean swimming' },
+    { id: 'olive-ridley-turtle', common: 'Olive Ridley Turtle', scientific: 'Lepidochelys olivacea', teaser: 'Thousands nest simultaneously in one of nature\'s great spectacles.', imageQuery: 'olive ridley turtle underwater' },
+    { id: 'banded-sea-krait', common: 'Banded Sea Krait', scientific: 'Laticauda colubrina', teaser: 'Venom ten times stronger than a cobra — yet remarkably docile.', imageQuery: 'sea krait snake ocean' },
+    { id: 'yellow-bellied-sea-snake', common: 'Yellow-bellied Sea Snake', scientific: 'Hydrophis platurus', teaser: 'The most widely distributed reptile on Earth, never needing to touch land.', imageQuery: 'sea snake underwater ocean' },
   ],
   invertebrates: [
     { id: 'crown-of-thorns-starfish', common: 'Crown of Thorns Starfish', scientific: 'Acanthaster planci', teaser: 'Beautiful predator that can single-handedly destroy a coral reef.' },
     { id: 'giant-clam', common: 'Giant Clam', scientific: 'Tridacna gigas', teaser: 'Farms its own algae like a solar-powered living reef.' },
-    { id: 'mantis-shrimp', common: 'Mantis Shrimp', scientific: 'Stomatopoda', teaser: 'Punches with the force of a bullet and sees colours we can\'t imagine.' },
     { id: 'blue-ringed-octopus', common: 'Blue-ringed Octopus', scientific: 'Hapalochlaena lunulata', teaser: 'Golf-ball-sized animal carrying enough venom to kill 26 humans.' },
     { id: 'nudibranch', common: 'Nudibranch', scientific: 'Nudibranchia', teaser: 'Naked sea slugs that are among the most flamboyant creatures alive.' },
     { id: 'moon-jellyfish', common: 'Moon Jellyfish', scientific: 'Aurelia aurita', teaser: 'No brain, no heart, no blood — yet one of Earth\'s most successful animals.' },
     { id: 'coconut-crab', common: 'Coconut Crab', scientific: 'Birgus latro', teaser: 'The world\'s largest land invertebrate can crack open a coconut.' },
     { id: 'peacock-mantis-shrimp', common: 'Peacock Mantis Shrimp', scientific: 'Odontodactylus scyllarus', teaser: 'The most visually complex creature known — sees 16 types of colour receptors.' },
+    { id: 'giant-clam', common: 'Giant Clam', scientific: 'Tridacna gigas', teaser: 'Farms its own algae like a solar-powered living reef.' },
   ],
   'coral-reef': [
     { id: 'staghorn-coral', common: 'Staghorn Coral', scientific: 'Acropora cervicornis', teaser: 'Fastest-growing coral that forms the backbone of Caribbean reefs.' },
@@ -75,6 +76,14 @@ export const species = {
     { id: 'soft-coral', common: 'Soft Coral', scientific: 'Alcyonacea', teaser: 'Swaying gardens that shelter hundreds of species in their branches.' },
     { id: 'sea-fan', common: 'Sea Fan', scientific: 'Gorgonia ventalina', teaser: 'Purple lace coral that filters plankton from passing currents.' },
     { id: 'coral-bleaching', common: 'Coral Bleaching', scientific: 'Thermal Stress Phenomenon', teaser: 'When rising temperatures turn reefs from a rainbow to a ghost.' },
+  ],
+  'deep-sea': [
+    { id: 'anglerfish', common: 'Anglerfish', scientific: 'Lophiiformes', teaser: 'Hunts in total darkness using a bioluminescent lure growing from its head.', imageQuery: 'anglerfish deep sea' },
+    { id: 'giant-squid', common: 'Giant Squid', scientific: 'Architeuthis dux', teaser: 'The largest invertebrate on Earth — rarely seen alive by humans.', imageQuery: 'giant squid deep ocean' },
+    { id: 'vampire-squid', common: 'Vampire Squid', scientific: 'Vampyroteuthis infernalis', teaser: 'Not a squid, not an octopus — a living fossil from 300 million years ago.', imageQuery: 'vampire squid deep sea' },
+    { id: 'bioluminescent-jellyfish', common: 'Bioluminescent Jellyfish', scientific: 'Aequorea victoria', teaser: 'Glows in the dark and gave science one of its greatest research tools.', imageQuery: 'bioluminescent jellyfish ocean' },
+    { id: 'dumbo-octopus', common: 'Dumbo Octopus', scientific: 'Grimpoteuthis', teaser: 'Flaps ear-like fins to swim in the deepest parts of the ocean.', imageQuery: 'dumbo octopus deep sea' },
+    { id: 'goblin-shark', common: 'Goblin Shark', scientific: 'Mitsukurina owstoni', teaser: 'A living fossil with a jaw that shoots forward to catch prey.', imageQuery: 'goblin shark deep sea' },
   ],
   seagrass: [
     { id: 'seagrass', common: 'Seagrass', scientific: 'Posidonia oceanica', teaser: 'Ancient underwater meadows that store more carbon than rainforests.' },
@@ -91,7 +100,7 @@ export const species = {
 }
 
 export const kingdomCategories = {
-  animal: ['fish', 'sharks-rays', 'marine-mammals', 'reptiles', 'invertebrates', 'coral-reef'],
+  animal: ['fish', 'sharks-rays', 'marine-mammals', 'reptiles', 'invertebrates', 'coral-reef', 'deep-sea'],
   plant: ['seagrass', 'mangroves', 'algae'],
 }
 
