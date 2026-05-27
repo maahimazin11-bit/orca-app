@@ -6,7 +6,7 @@ export const kingdoms = [
 export const categories = {
   animal: [
     { id: 'fish', name: 'Fish', icon: 'fish', count: 10 },
-    { id: 'sharks-rays', name: 'Sharks & Rays', icon: 'shark', count: 8 },
+    { id: 'sharks-rays', name: 'Sharks & Rays', icon: 'shark', count: 7 },
     { id: 'marine-mammals', name: 'Marine Mammals', icon: 'whale', count: 6 },
     { id: 'reptiles', name: 'Reptiles', icon: 'turtle', count: 5 },
     { id: 'invertebrates', name: 'Invertebrates', icon: 'jellyfish', count: 7 },
@@ -35,7 +35,6 @@ export const species = {
   ],
   'sharks-rays': [
     { id: 'whale-shark', common: 'Whale Shark', scientific: 'Rhincodon typus', teaser: 'The ocean\'s largest fish — and it only eats tiny plankton.', imageQuery: 'whale shark underwater swimming diver' },
-    { id: 'blacktip-reef-shark', common: 'Blacktip Reef Shark', scientific: 'Carcharhinus melanopterus', teaser: 'The quintessential shallow-reef shark, elegant and ever-present.', wikiTitle: 'Blacktip_reef_shark' },
     { id: 'whitetip-reef-shark', common: 'Whitetip Reef Shark', scientific: 'Triaenodon obesus', teaser: 'Rests on the seafloor all day, hunts through reef caves at night.' },
     { id: 'hammerhead-shark', common: 'Hammerhead Shark', scientific: 'Sphyrna lewini', teaser: 'Its bizarre head is actually a finely tuned sensory instrument.', imageQuery: 'scalloped hammerhead shark underwater' },
     { id: 'oceanic-manta-ray', common: 'Oceanic Manta Ray', scientific: 'Mobula birostris', teaser: 'Wingspan of seven metres, brain bigger than any other fish.' },
@@ -59,12 +58,12 @@ export const species = {
     { id: 'banded-sea-krait', common: 'Banded Sea Krait', scientific: 'Laticauda colubrina', teaser: 'Venom ten times stronger than a cobra — yet remarkably docile.', imageQuery: 'sea krait snake ocean' },
   ],
   invertebrates: [
-    { id: 'crown-of-thorns-starfish', common: 'Crown of Thorns Starfish', scientific: 'Acanthaster planci', teaser: 'Beautiful predator that can single-handedly destroy a coral reef.' },
+    { id: 'crown-of-thorns-starfish', common: 'Crown of Thorns Starfish', scientific: 'Acanthaster planci', teaser: 'Beautiful predator that can single-handedly destroy a coral reef.', wikiTitle: 'Crown-of-thorns_starfish' },
     { id: 'giant-clam', common: 'Giant Clam', scientific: 'Tridacna gigas', teaser: 'Farms its own algae like a solar-powered living reef.' },
-    { id: 'blue-ringed-octopus', common: 'Blue-ringed Octopus', scientific: 'Hapalochlaena lunulata', teaser: 'Golf-ball-sized animal carrying enough venom to kill 26 humans.' },
+    { id: 'blue-ringed-octopus', common: 'Blue-ringed Octopus', scientific: 'Hapalochlaena lunulata', teaser: 'Golf-ball-sized animal carrying enough venom to kill 26 humans.', wikiTitle: 'Blue-ringed_octopus' },
     { id: 'nudibranch', common: 'Nudibranch', scientific: 'Nudibranchia', teaser: 'Naked sea slugs that are among the most flamboyant creatures alive.' },
     { id: 'moon-jellyfish', common: 'Moon Jellyfish', scientific: 'Aurelia aurita', teaser: 'No brain, no heart, no blood — yet one of Earth\'s most successful animals.' },
-    { id: 'coconut-crab', common: 'Coconut Crab', scientific: 'Birgus latro', teaser: 'The world\'s largest land invertebrate can crack open a coconut.' },
+    { id: 'coconut-crab', common: 'Coconut Crab', scientific: 'Birgus latro', teaser: 'The world\'s largest land invertebrate can crack open a coconut.', wikiTitle: 'Coconut_crab' },
     { id: 'peacock-mantis-shrimp', common: 'Peacock Mantis Shrimp', scientific: 'Odontodactylus scyllarus', teaser: 'The most visually complex creature known — sees 16 types of colour receptors.' },
   ],
   'coral-reef': [
