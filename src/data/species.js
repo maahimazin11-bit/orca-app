@@ -35,13 +35,13 @@ export const species = {
   ],
   'sharks-rays': [
     { id: 'whale-shark', common: 'Whale Shark', scientific: 'Rhincodon typus', teaser: 'The ocean\'s largest fish — and it only eats tiny plankton.', imageQuery: 'whale shark underwater swimming diver' },
-    { id: 'blacktip-reef-shark', common: 'Blacktip Reef Shark', scientific: 'Carcharhinus melanopterus', teaser: 'The quintessential shallow-reef shark, elegant and ever-present.', imageQuery: 'blacktip reef shark coral reef shallow', wikiTitle: 'Blacktip_reef_shark' },
+    { id: 'blacktip-reef-shark', common: 'Blacktip Reef Shark', scientific: 'Carcharhinus melanopterus', teaser: 'The quintessential shallow-reef shark, elegant and ever-present.', wikiTitle: 'Blacktip_reef_shark' },
     { id: 'whitetip-reef-shark', common: 'Whitetip Reef Shark', scientific: 'Triaenodon obesus', teaser: 'Rests on the seafloor all day, hunts through reef caves at night.' },
     { id: 'hammerhead-shark', common: 'Hammerhead Shark', scientific: 'Sphyrna lewini', teaser: 'Its bizarre head is actually a finely tuned sensory instrument.', imageQuery: 'scalloped hammerhead shark underwater' },
     { id: 'oceanic-manta-ray', common: 'Oceanic Manta Ray', scientific: 'Mobula birostris', teaser: 'Wingspan of seven metres, brain bigger than any other fish.' },
     { id: 'blue-spotted-stingray', common: 'Blue-spotted Stingray', scientific: 'Neotrygon kuhlii', teaser: 'Jewel-spotted and venomous — a hidden gem of the sandy reef floor.' },
     { id: 'zebra-shark', common: 'Zebra Shark', scientific: 'Stegostoma tigrinum', teaser: 'Born with stripes, grows into spots — and can reproduce without a mate.', imageQuery: 'zebra shark reef spotted' },
-    { id: 'nurse-shark', common: 'Nurse Shark', scientific: 'Ginglymostoma cirratum', teaser: 'The ocean\'s most docile shark, often found napping in piles.', imageQuery: 'nurse shark resting reef bottom', wikiTitle: 'Nurse_shark' },
+    { id: 'nurse-shark', common: 'Nurse Shark', scientific: 'Ginglymostoma cirratum', teaser: 'The ocean\'s most docile shark, often found napping in piles.', wikiTitle: 'Nurse_shark' },
   ],
   'marine-mammals': [
     { id: 'orca', common: 'Orca', scientific: 'Orcinus orca', teaser: 'Not a whale — the largest dolphin, and the ocean\'s apex predator.' },
