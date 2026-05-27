@@ -33,7 +33,7 @@ export default function SpeciesDetail() {
       .catch(err => setError(err.message || 'Something went wrong. Please try again.'))
       .finally(() => setLoading(false))
 
-    fetch(`https://api.unsplash.com/search/photos?query=${speciesData.common}&client_id=yKWsNXjW2eD4zo-svroFAd8yT3dmvjqsRgI3L1Hfy2g&per_page=1`)
+    fetch(`https://api.unsplash.com/search/photos?query=${speciesData.imageQuery || speciesData.common}&client_id=yKWsNXjW2eD4zo-svroFAd8yT3dmvjqsRgI3L1Hfy2g&per_page=1`)
       .then(res => res.json())
       .then(data => {
         if (data.results && data.results[0]) {
