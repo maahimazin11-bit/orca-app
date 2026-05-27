@@ -1,5 +1,18 @@
 import { useNavigate } from 'react-router-dom'
 
+const categoryColors = {
+  fish: { from: '#0891b2', to: '#0e7490', shadow: '#0891b240' },
+  'sharks-rays': { from: '#1e3a5f', to: '#162d4a', shadow: '#1e3a5f40' },
+  'marine-mammals': { from: '#0d7377', to: '#0a5c60', shadow: '#0d737740' },
+  reptiles: { from: '#2d6a4f', to: '#1b4332', shadow: '#2d6a4f40' },
+  invertebrates: { from: '#e05c3a', to: '#c44b2a', shadow: '#e05c3a40' },
+  'coral-reef': { from: '#c9184a', to: '#a4133c', shadow: '#c9184a40' },
+  'deep-sea': { from: '#4a0e8f', to: '#3a0b70', shadow: '#4a0e8f40' },
+  seagrass: { from: '#52b788', to: '#40916c', shadow: '#52b78840' },
+  mangroves: { from: '#1b4332', to: '#081c15', shadow: '#1b433240' },
+  algae: { from: '#40916c', to: '#2d6a4f', shadow: '#40916c40' },
+}
+
 const icons = {
   fish: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
@@ -56,6 +69,17 @@ const icons = {
       <line x1="8" y1="20" x2="16" y2="20" />
     </svg>
   ),
+  deepsea: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M12 9V5" />
+      <path d="M15 10.5l3-3" />
+      <path d="M15 13.5l3 3" />
+      <path d="M12 15v4" />
+      <path d="M9 13.5l-3 3" />
+      <path d="M9 10.5l-3-3" />
+    </svg>
+  ),
   seagrass: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
       <path d="M8 20c0-6 2-10 2-10S8 6 6 4" />
@@ -84,17 +108,24 @@ const icons = {
 
 export default function CategoryCard({ category, kingdom }) {
   const navigate = useNavigate()
+  const colors = categoryColors[category.id] || { from: '#0891b2', to: '#0e7490', shadow: '#0891b240' }
+
   return (
     <button
       onClick={() => navigate(`/kingdom/${kingdom}/category/${category.id}`)}
-      className="bg-white rounded-2xl p-5 flex flex-col items-center gap-3 shadow-sm border border-gray-100 hover:shadow-md hover:border-turquoise/30 active:scale-95 transition-all text-center w-full"
+      className="rounded-2xl p-5 flex flex-col items-center gap-3 active:scale-95 transition-all text-center w-full"
+      style={{
+        background: `linear-gradient(135deg, ${colors.from} 0%, ${colors.to} 100%)`,
+        boxShadow: `0 4px 20px ${colors.shadow}`,
+        border: '1px solid rgba(255,255,255,0.15)'
+      }}
     >
-      <div className="text-turquoise">
+      <div className="text-white opacity-90">
         {icons[category.icon] || icons.fish}
       </div>
       <div>
-        <p className="font-semibold text-oceannavy text-sm leading-tight">{category.name}</p>
-        <p className="text-xs text-gray-400 mt-1">{category.count} species</p>
+        <p className="font-semibold text-white text-sm leading-tight">{category.name}</p>
+        <p className="text-xs text-white/60 mt-1">{category.count} species</p>
       </div>
     </button>
   )
