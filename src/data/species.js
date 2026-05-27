@@ -54,7 +54,7 @@ export const species = {
   reptiles: [
     { id: 'green-sea-turtle', common: 'Green Sea Turtle', scientific: 'Chelonia mydas', teaser: 'Returns to the exact beach where it was born, decades later.', imageQuery: 'green sea turtle underwater swimming' },
     { id: 'hawksbill-sea-turtle', common: 'Hawksbill Sea Turtle', scientific: 'Eretmochelys imbricata', teaser: 'Eats sponges that would otherwise smother coral reefs.', imageQuery: 'hawksbill turtle underwater reef' },
-    { id: 'leatherback-sea-turtle', common: 'Leatherback Sea Turtle', scientific: 'Dermochelys coriacea', teaser: 'Dives deeper than most submarines and has no hard shell.', imageQuery: 'leatherback sea turtle adult ocean swimming' },
+    { id: 'leatherback-sea-turtle', common: 'Leatherback Sea Turtle', scientific: 'Dermochelys coriacea', teaser: 'Dives deeper than most submarines and has no hard shell.', imageQuery: 'leatherback turtle nesting beach' },
     { id: 'olive-ridley-turtle', common: 'Olive Ridley Turtle', scientific: 'Lepidochelys olivacea', teaser: 'Thousands nest simultaneously in one of nature\'s great spectacles.', imageQuery: 'olive ridley turtle underwater' },
     { id: 'banded-sea-krait', common: 'Banded Sea Krait', scientific: 'Laticauda colubrina', teaser: 'Venom ten times stronger than a cobra — yet remarkably docile.', imageQuery: 'sea krait snake ocean' },
     { id: 'yellow-bellied-sea-snake', common: 'Yellow-bellied Sea Snake', scientific: 'Hydrophis platurus', teaser: 'The most widely distributed reptile on Earth, never needing to touch land.', imageQuery: 'sea snake underwater ocean' },
@@ -67,7 +67,6 @@ export const species = {
     { id: 'moon-jellyfish', common: 'Moon Jellyfish', scientific: 'Aurelia aurita', teaser: 'No brain, no heart, no blood — yet one of Earth\'s most successful animals.' },
     { id: 'coconut-crab', common: 'Coconut Crab', scientific: 'Birgus latro', teaser: 'The world\'s largest land invertebrate can crack open a coconut.' },
     { id: 'peacock-mantis-shrimp', common: 'Peacock Mantis Shrimp', scientific: 'Odontodactylus scyllarus', teaser: 'The most visually complex creature known — sees 16 types of colour receptors.' },
-    { id: 'giant-clam', common: 'Giant Clam', scientific: 'Tridacna gigas', teaser: 'Farms its own algae like a solar-powered living reef.' },
   ],
   'coral-reef': [
     { id: 'staghorn-coral', common: 'Staghorn Coral', scientific: 'Acropora cervicornis', teaser: 'Fastest-growing coral that forms the backbone of Caribbean reefs.' },
@@ -120,7 +119,7 @@ export function searchSpecies(query) {
     }
   }
   return results
-}imageQuery: 'leatherback sea turtle adult ocean swimming
+}
 
 export function getSpeciesById(id) {
   for (const [categoryId, speciesList] of Object.entries(species)) {
