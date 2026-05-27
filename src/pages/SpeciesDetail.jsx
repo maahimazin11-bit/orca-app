@@ -33,23 +33,31 @@ export default function SpeciesDetail() {
       .catch(err => setError(err.message || 'Something went wrong. Please try again.'))
       .finally(() => setLoading(false))
 
-    const unsplashQuery = speciesData.imageQuery || speciesData.common
-    const wikiTitle = speciesData.wikiTitle || speciesData.common.replace(/ /g, '_')
-
-    fetch(`https://api.unsplash.com/search/photos?query=${unsplashQuery}&client_id=yKWsNXjW2eD4zo-svroFAd8yT3dmvjqsRgI3L1Hfy2g&per_page=1`)
-      .then(res => res.json())
-      .then(data => {
-        if (data.results && data.results[0]) {
-          setImage(data.results[0].urls.regular)
-        } else {
-          return fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${wikiTitle}`)
-            .then(res => res.json())
-            .then(data => {
-              if (data.thumbnail) setImage(data.thumbnail.source)
-            })
-        }
-      })
-      .catch(() => {})
+    if (speciesData.wikiTitle) {
+      fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${speciesData.wikiTitle}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data.thumbnail) setImage(data.thumbnail.source)
+        })
+        .catch(() => {})
+    } else {
+      const unsplashQuery = speciesData.imageQuery || speciesData.common
+      const wikiTitle = speciesData.common.replace(/ /g, '_')
+      fetch(`https://api.unsplash.com/search/photos?query=${unsplashQuery}&client_id=yKWsNXjW2eD4zo-svroFAd8yT3dmvjqsRgI3L1Hfy2g&per_page=1`)
+        .then(res => res.json())
+        .then(data => {
+          if (data.results && data.results[0]) {
+            setImage(data.results[0].urls.regular)
+          } else {
+            return fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${wikiTitle}`)
+              .then(res => res.json())
+              .then(data => {
+                if (data.thumbnail) setImage(data.thumbnail.source)
+              })
+          }
+        })
+        .catch(() => {})
+    }
   }, [id])
 
   function handleShare() {
