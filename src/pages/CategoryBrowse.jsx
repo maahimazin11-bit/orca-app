@@ -9,7 +9,7 @@ export default function CategoryBrowse() {
   const cats = categories[kingdom] || []
 
   return (
-    <div className="min-h-screen" style={{ background: 'linear-gradient(180deg, #0c5070 0%, #0a3d5c 15%, #f0f4f8 15%)' }}>
+    <div className="min-h-screen" style={{ background: '#e8f4f8' }}>
       {/* Header */}
       <div style={{ background: 'linear-gradient(160deg, #0891b2 0%, #067093 60%, #0c5070 100%)' }} className="px-5 pt-12 pb-8">
         <button
