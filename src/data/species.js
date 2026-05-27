@@ -120,7 +120,7 @@ export function searchSpecies(query) {
     }
   }
   return results
-}
+}imageQuery: 'leatherback sea turtle adult ocean swimming
 
 export function getSpeciesById(id) {
   for (const [categoryId, speciesList] of Object.entries(species)) {
