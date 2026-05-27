@@ -10,7 +10,7 @@ export const categories = {
     { id: 'marine-mammals', name: 'Marine Mammals', icon: 'whale', count: 6 },
     { id: 'reptiles', name: 'Reptiles', icon: 'turtle', count: 5 },
     { id: 'invertebrates', name: 'Invertebrates', icon: 'jellyfish', count: 7 },
-    { id: 'coral-reef', name: 'Coral & Reef', icon: 'coral', count: 6 },
+    { id: 'coral-reef', name: 'Coral & Reef', icon: 'coral', count: 4 },
     { id: 'deep-sea', name: 'Deep Sea', icon: 'deepsea', count: 6 },
   ],
   plant: [
@@ -68,11 +68,10 @@ export const species = {
   ],
   'coral-reef': [
     { id: 'staghorn-coral', common: 'Staghorn Coral', scientific: 'Acropora cervicornis', teaser: 'Fastest-growing coral that forms the backbone of Caribbean reefs.' },
-    { id: 'brain-coral', common: 'Brain Coral', scientific: 'Diploria labyrinthiformis', teaser: 'Can live for 900 years and looks exactly like a human brain.' },
+    { id: 'brain-coral', common: 'Brain Coral', scientific: 'Diploria labyrinthiformis', teaser: 'Can live for 900 years and looks exactly like a human brain.', wikiTitle: 'Brain_coral' },
     { id: 'table-coral', common: 'Table Coral', scientific: 'Acropora hyacinthus', teaser: 'Grows flat like a table to maximise sunlight in the shallows.' },
-    { id: 'soft-coral', common: 'Soft Coral', scientific: 'Alcyonacea', teaser: 'Swaying gardens that shelter hundreds of species in their branches.' },
-    { id: 'sea-fan', common: 'Sea Fan', scientific: 'Gorgonia ventalina', teaser: 'Purple lace coral that filters plankton from passing currents.' },
-    { id: 'coral-bleaching', common: 'Coral Bleaching', scientific: 'Thermal Stress Phenomenon', teaser: 'When rising temperatures turn reefs from a rainbow to a ghost.' },
+    { id: 'soft-coral', common: 'Soft Coral', scientific: 'Alcyonacea', teaser: 'Swaying gardens that shelter hundreds of species in their branches.', wikiTitle: 'Soft_coral' },
+    { id: 'coral-bleaching', common: 'Coral Bleaching', scientific: 'Thermal Stress Phenomenon', teaser: 'When rising temperatures turn reefs from a rainbow to a ghost.', wikiTitle: 'Coral_bleaching' },
   ],
   'deep-sea': [
     { id: 'anglerfish', common: 'Anglerfish', scientific: 'Lophiiformes', teaser: 'Hunts in total darkness using a bioluminescent lure growing from its head.', imageQuery: 'anglerfish deep sea' },
