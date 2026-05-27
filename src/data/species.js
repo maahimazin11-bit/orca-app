@@ -5,12 +5,12 @@ export const kingdoms = [
 
 export const categories = {
   animal: [
-    { id: 'fish', name: 'Fish', icon: 'fish', count: 10 },
+    { id: 'fish', name: 'Fish', icon: 'fish', count: 8 },
     { id: 'sharks-rays', name: 'Sharks & Rays', icon: 'shark', count: 7 },
     { id: 'marine-mammals', name: 'Marine Mammals', icon: 'whale', count: 6 },
     { id: 'reptiles', name: 'Reptiles', icon: 'turtle', count: 5 },
     { id: 'invertebrates', name: 'Invertebrates', icon: 'jellyfish', count: 7 },
-    { id: 'coral-reef', name: 'Coral & Reef', icon: 'coral', count: 4 },
+    { id: 'coral-reef', name: 'Coral & Reef', icon: 'coral', count: 5 },
     { id: 'deep-sea', name: 'Deep Sea', icon: 'deepsea', count: 6 },
   ],
   plant: [
@@ -25,11 +25,9 @@ export const species = {
     { id: 'clownfish', common: 'Clownfish', scientific: 'Amphiprioninae', teaser: 'The reef\'s most famous resident, forever bound to its anemone.', imageQuery: 'clownfish anemone reef' },
     { id: 'blue-tang', common: 'Blue Tang', scientific: 'Paracanthurus hepatus', teaser: 'Vivid blue surgeonfish with a hidden scalpel at its tail.' },
     { id: 'lionfish', common: 'Lionfish', scientific: 'Pterois', teaser: 'Spectacular and venomous — a reef predator wrapped in warning colours.' },
-    { id: 'napoleon-wrasse', common: 'Napoleon Wrasse', scientific: 'Cheilinus undulatus', teaser: 'The gentle giant of coral reefs, ancient and unhurried.', imageQuery: 'humphead wrasse coral reef' },
     { id: 'bumphead-parrotfish', common: 'Bumphead Parrotfish', scientific: 'Bolbometopon muricatum', teaser: 'It literally eats coral and poops out white sand beaches.' },
     { id: 'mandarin-fish', common: 'Mandarin Fish', scientific: 'Synchiropus splendidus', teaser: 'Possibly the most colourful vertebrate on Earth.', imageQuery: 'mandarin dragonet fish coral' },
     { id: 'seahorse', common: 'Seahorse', scientific: 'Hippocampus', teaser: 'The only animal where the male becomes pregnant.', imageQuery: 'seahorse ocean marine' },
-    { id: 'moorish-idol', common: 'Moorish Idol', scientific: 'Zanclus cornutus', teaser: 'An iconic reef fish that almost never survives in captivity.', imageQuery: 'moorish idol fish reef' },
     { id: 'barracuda', common: 'Barracuda', scientific: 'Sphyraena', teaser: 'Torpedo-shaped apex predator, terrifying up close.' },
     { id: 'trevally', common: 'Trevally', scientific: 'Caranx ignobilis', teaser: 'A powerful pack hunter that dominates open-water reefs.', imageQuery: 'giant trevally fish ocean' },
   ],
@@ -70,7 +68,7 @@ export const species = {
     { id: 'staghorn-coral', common: 'Staghorn Coral', scientific: 'Acropora cervicornis', teaser: 'Fastest-growing coral that forms the backbone of Caribbean reefs.' },
     { id: 'brain-coral', common: 'Brain Coral', scientific: 'Diploria labyrinthiformis', teaser: 'Can live for 900 years and looks exactly like a human brain.', wikiTitle: 'Brain_coral' },
     { id: 'table-coral', common: 'Table Coral', scientific: 'Acropora hyacinthus', teaser: 'Grows flat like a table to maximise sunlight in the shallows.' },
-    { id: 'soft-coral', common: 'Soft Coral', scientific: 'Alcyonacea', teaser: 'Swaying gardens that shelter hundreds of species in their branches.', wikiTitle: 'Soft_coral' },
+    { id: 'fire-coral', common: 'Fire Coral', scientific: 'Millepora', teaser: 'Not a true coral — a colonial hydrozoan that stings anyone who touches it.', wikiTitle: 'Fire_coral' },
     { id: 'coral-bleaching', common: 'Coral Bleaching', scientific: 'Thermal Stress Phenomenon', teaser: 'When rising temperatures turn reefs from a rainbow to a ghost.', wikiTitle: 'Coral_bleaching' },
   ],
   'deep-sea': [
