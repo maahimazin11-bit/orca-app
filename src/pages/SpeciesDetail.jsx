@@ -19,16 +19,28 @@ export default function SpeciesDetail() {
   const [info, setInfo] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [image, setImage] = useState(null)
 
   useEffect(() => {
     if (!speciesData) return
     setLoading(true)
     setError(null)
     setInfo(null)
+    setImage(null)
+
     fetchSpeciesInfo(speciesData.common)
       .then(text => setInfo(parseSpeciesResponse(text)))
       .catch(err => setError(err.message || 'Something went wrong. Please try again.'))
       .finally(() => setLoading(false))
+
+    fetch(`https://api.unsplash.com/search/photos?query=${speciesData.common}&client_id=yKWsNXjW2eD4zo-svroFAd8yT3dmvjqsRgI3L1Hfy2g&per_page=1`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.results && data.results[0]) {
+          setImage(data.results[0].urls.regular)
+        }
+      })
+      .catch(() => {})
   }, [id])
 
   function handleShare() {
@@ -56,22 +68,15 @@ export default function SpeciesDetail() {
 
   return (
     <div className="min-h-screen bg-warmwhite">
-      {/* Header */}
       <div style={{ background: 'linear-gradient(160deg, #0891b2 0%, #067093 60%, #0c5070 100%)' }} className="px-5 pt-12 pb-8">
         <div className="flex items-center justify-between mb-5">
-          <button
-            onClick={() => navigate(-1)}
-            className="flex items-center gap-1.5 text-white/80 text-sm"
-          >
+          <button onClick={() => navigate(-1)} className="flex items-center gap-1.5 text-white/80 text-sm">
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="15 18 9 12 15 6" />
             </svg>
             Back
           </button>
-          <button
-            onClick={handleShare}
-            className="flex items-center gap-1.5 text-white/80 text-sm"
-          >
+          <button onClick={handleShare} className="flex items-center gap-1.5 text-white/80 text-sm">
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="18" cy="5" r="3" />
               <circle cx="6" cy="12" r="3" />
@@ -87,7 +92,12 @@ export default function SpeciesDetail() {
         <p className="text-white/70 text-sm mt-3 leading-relaxed">{speciesData.teaser}</p>
       </div>
 
-      {/* Content */}
+      {image && (
+        <div className="px-5 pt-5 max-w-sm mx-auto">
+          <img src={image} alt={speciesData.common} className="w-full rounded-2xl object-cover" style={{ maxHeight: '220px' }} />
+        </div>
+      )}
+
       <div className="px-5 pt-6 pb-10 max-w-sm mx-auto">
         {loading && <LoadingPulse />}
 
@@ -120,7 +130,7 @@ export default function SpeciesDetail() {
                     <span className="text-base">{icon}</span>
                     <h2 className="text-xs font-bold uppercase tracking-widest">{label}</h2>
                   </div>
-                  <p className="text-gray-700 text-sm leading-relaxed">{info[key]}</p>
+                  <p className="text-gray-700 text-sm leading-relaxed">{info[key].replace(/\*\*/g, '')}</p>
                 </div>
               ) : null
             )}
