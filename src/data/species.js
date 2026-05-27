@@ -72,12 +72,12 @@ export const species = {
     { id: 'coral-bleaching', common: 'Coral Bleaching', scientific: 'Thermal Stress Phenomenon', teaser: 'When rising temperatures turn reefs from a rainbow to a ghost.', wikiTitle: 'Coral_bleaching' },
   ],
   'deep-sea': [
-    { id: 'anglerfish', common: 'Anglerfish', scientific: 'Lophiiformes', teaser: 'Hunts in total darkness using a bioluminescent lure growing from its head.', imageQuery: 'anglerfish deep sea' },
+    { id: 'anglerfish', common: 'Anglerfish', scientific: 'Lophiiformes', teaser: 'Hunts in total darkness using a bioluminescent lure growing from its head.', wikiTitle: 'Anglerfish' },
     { id: 'giant-squid', common: 'Giant Squid', scientific: 'Architeuthis dux', teaser: 'The largest invertebrate on Earth — rarely seen alive by humans.', imageQuery: 'giant squid deep ocean' },
-    { id: 'vampire-squid', common: 'Vampire Squid', scientific: 'Vampyroteuthis infernalis', teaser: 'Not a squid, not an octopus — a living fossil from 300 million years ago.', imageQuery: 'vampire squid deep sea' },
-    { id: 'bioluminescent-jellyfish', common: 'Bioluminescent Jellyfish', scientific: 'Aequorea victoria', teaser: 'Glows in the dark and gave science one of its greatest research tools.', imageQuery: 'bioluminescent jellyfish ocean' },
+    { id: 'vampire-squid', common: 'Vampire Squid', scientific: 'Vampyroteuthis infernalis', teaser: 'Not a squid, not an octopus — a living fossil from 300 million years ago.', wikiTitle: 'Vampire_squid' },
+    { id: 'siphonophore', common: 'Siphonophore', scientific: 'Siphonophorae', teaser: 'A colonial organism that can stretch 40 metres — the longest animal on Earth.', wikiTitle: 'Siphonophorae' },
     { id: 'dumbo-octopus', common: 'Dumbo Octopus', scientific: 'Grimpoteuthis', teaser: 'Flaps ear-like fins to swim in the deepest parts of the ocean.', imageQuery: 'dumbo octopus deep sea' },
-    { id: 'goblin-shark', common: 'Goblin Shark', scientific: 'Mitsukurina owstoni', teaser: 'A living fossil with a jaw that shoots forward to catch prey.', imageQuery: 'goblin shark deep sea' },
+    { id: 'goblin-shark', common: 'Goblin Shark', scientific: 'Mitsukurina owstoni', teaser: 'A living fossil with a jaw that shoots forward to catch prey.', wikiTitle: 'Goblin_shark' },
   ],
   seagrass: [
     { id: 'seagrass', common: 'Seagrass', scientific: 'Posidonia oceanica', teaser: 'Ancient underwater meadows that store more carbon than rainforests.' },
